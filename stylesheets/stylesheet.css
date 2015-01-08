@@ -35,6 +35,11 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+em {
+    color: #FF6600;
+    font-weight: 600;
+    font-style: normal;
+}
 ol, ul {
   list-style: none;
 }
@@ -124,9 +129,7 @@ footer a {
   text-decoration: underline;
 }
 
-em {
-  font-style: italic;
-}
+
 
 strong {
   font-weight: bold;
