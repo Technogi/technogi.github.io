@@ -1,9 +1,10 @@
 @import "{{ site.theme }}";
-
-body{
-  background-color: black;
-  font-family:  Helvetica, Arial, serif;
+body,
+html.div {
+  color: red;
+  font-family: Helvetica, Arial, serif;
 }
+
 header {
   .inner {
     background-color: red;
