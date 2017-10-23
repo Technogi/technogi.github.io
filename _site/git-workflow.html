@@ -77,7 +77,45 @@
 	    </span>
 		</p>		
 		<div class="post">
-			
+			<h2 id="reglas">Reglas</h2>
+<ul>
+  <li>Se trabaja sobre un branch por featur/bug de JIRA</li>
+  <li>El nombre del branch es el mismo del bug que ataca</li>
+  <li>Una vez terminado se debe hacer un merge sobre master</li>
+  <li>Durante el desarrollo del feature / bug se debe de hacer rebase</li>
+  <li>Al terminar el desarrollo se debe hacer un merge</li>
+  <li>los rebases se deben de hacer al menos una vez al día</li>
+  <li>Se debe hacer push sobre el branch dos veces al día mínimo</li>
+</ul>
+
+<h2 id="proceso-general">Proceso general</h2>
+<pre><code>git checkout master
+git fetch origin
+git merge master
+</code></pre>
+
+<h2 id="como-hacer-un-branch-nuevo">Como hacer un branch nuevo</h2>
+<pre><code>git checkout -b PRJ-123-awesome-feature
+</code></pre>
+
+<h2 id="como-hacer-rebase">Como hacer rebase</h2>
+<pre><code>git fetch origin
+git rebase origin/master
+</code></pre>
+<h2 id="como-hacer-el-merge-final">Como hacer el merge final</h2>
+<pre><code>git rebase -i origin/master
+git checkout master
+git pull origin master
+
+git merge --no-ff PRJ-123-awesome-feature
+</code></pre>
+
+<h2 id="videos-recomendados">Videos recomendados</h2>
+<ul>
+  <li><a href="https://youtu.be/9SZ7kSQ2424">It’ not “pure CI”</a></li>
+  <li><a href="https://youtu.be/B78AdLNZBQQ">What ir a pull request</a></li>
+</ul>
+
 
 		</div>
 	</div>
@@ -91,11 +129,6 @@
 		    <li>
 			  <span>18 Oct 2017 &raquo;</span>
 			  <a href="http://localhost:4000/error-handling">Error Handling</a>
-		    </li>
-		    
-		    <li>
-			  <span>19 Aug 2014 &raquo;</span>
-			  <a href="http://localhost:4000/sample-post">Sample post from harmony</a>
 		    </li>
 		    
 		    <li>
