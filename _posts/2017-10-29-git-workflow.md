@@ -10,8 +10,8 @@ permalink: git-workflow
 author: Carlos
 ---
 ## Reglas
-- Se trabaja sobre un branch por featur/bug de JIRA
-- El nombre del branch es el mismo del bug que ataca
+- Se trabaja sobre un branch por feature / bug de JIRA
+- El nombre del branch es el mismo del feature / bug que ataca
 - Una vez terminado se debe hacer un merge sobre master
 - Durante el desarrollo del feature / bug se debe de hacer rebase
 - Al terminar el desarrollo se debe hacer un merge
@@ -46,5 +46,5 @@ git merge --no-ff PRJ-123-awesome-feature
 
 ## Videos recomendados
 - [It' not "pure CI"](https://youtu.be/9SZ7kSQ2424)
-- [What ir a pull request](https://youtu.be/B78AdLNZBQQ)
+- [What is a pull request](https://youtu.be/B78AdLNZBQQ)
 
