@@ -5,16 +5,48 @@
     <description>Technogi Tech Blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Oct 2017 10:07:54 -0500</pubDate>
-    <lastBuildDate>Mon, 23 Oct 2017 10:07:54 -0500</lastBuildDate>
-    <generator>Jekyll v3.6.0</generator>
+    <pubDate>Thu, 26 Oct 2017 11:15:54 -0500</pubDate>
+    <lastBuildDate>Thu, 26 Oct 2017 11:15:54 -0500</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Logs for Development</title>
+        <description>&lt;h2 id=&quot;evaluación-de-librerías-para-logs&quot;&gt;Evaluación de librerías para logs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Considerar los mecanismos o protocolos de transporte:
+    &lt;ul&gt;
+      &lt;li&gt;File&lt;/li&gt;
+      &lt;li&gt;Console&lt;/li&gt;
+      &lt;li&gt;Syslog&lt;/li&gt;
+      &lt;li&gt;HTTP&lt;/li&gt;
+      &lt;li&gt;Stream&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Buscar siempre&lt;/li&gt;
+  &lt;li&gt;Una vez terminado se debe hacer un merge sobre master&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 25 Oct 2017 21:36:01 -0500</pubDate>
+        <link>http://localhost:4000/logs-for-development</link>
+        <guid isPermaLink="true">http://localhost:4000/logs-for-development</guid>
+        
+        
+        <category>micro trainning</category>
+        
+        <category>logs</category>
+        
+        <category>javascript</category>
+        
+        <category>node</category>
+        
+      </item>
     
       <item>
         <title>Git Workflow</title>
         <description>&lt;h2 id=&quot;reglas&quot;&gt;Reglas&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Se trabaja sobre un branch por featur/bug de JIRA&lt;/li&gt;
-  &lt;li&gt;El nombre del branch es el mismo del bug que ataca&lt;/li&gt;
+  &lt;li&gt;Se trabaja sobre un branch por feature / bug de JIRA&lt;/li&gt;
+  &lt;li&gt;El nombre del branch es el mismo del feature / bug que ataca&lt;/li&gt;
   &lt;li&gt;Una vez terminado se debe hacer un merge sobre master&lt;/li&gt;
   &lt;li&gt;Durante el desarrollo del feature / bug se debe de hacer rebase&lt;/li&gt;
   &lt;li&gt;Al terminar el desarrollo se debe hacer un merge&lt;/li&gt;
@@ -47,7 +79,7 @@ git merge --no-ff PRJ-123-awesome-feature
 &lt;h2 id=&quot;videos-recomendados&quot;&gt;Videos recomendados&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://youtu.be/9SZ7kSQ2424&quot;&gt;It’ not “pure CI”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://youtu.be/B78AdLNZBQQ&quot;&gt;What ir a pull request&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/B78AdLNZBQQ&quot;&gt;What is a pull request&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
