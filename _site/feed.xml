@@ -5,9 +5,69 @@
     <description>Technogi Tech Blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Oct 2017 11:15:54 -0500</pubDate>
-    <lastBuildDate>Thu, 26 Oct 2017 11:15:54 -0500</lastBuildDate>
+    <pubDate>Mon, 30 Oct 2017 17:59:15 -0600</pubDate>
+    <lastBuildDate>Mon, 30 Oct 2017 17:59:15 -0600</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Bug Handling</title>
+        <description>&lt;h2 id=&quot;como-lidiar-con-un-bug&quot;&gt;¿Como lidiar con un BUG?&lt;/h2&gt;
+
+&lt;h3 id=&quot;no-grito-no-corro-no-empujo&quot;&gt;No grito, no corro no empujo&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;¿Que pasa? ¿Que debería pasar?&lt;/li&gt;
+  &lt;li&gt;Pedir detalles para poder reproducir&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;encontrar-el-problema&quot;&gt;Encontrar el problema&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lograr reproducir el error&lt;/li&gt;
+  &lt;li&gt;Lograr repoducirlo consistentemente&lt;/li&gt;
+  &lt;li&gt;Encontrar patrones&lt;/li&gt;
+  &lt;li&gt;Acotar el error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deslinde-de-responabilidades&quot;&gt;Deslinde de responabilidades&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;¿Es verdaderamente un errors?&lt;/li&gt;
+  &lt;li&gt;¿Yo lo puedo arreglar?&lt;/li&gt;
+  &lt;li&gt;¿Quien lo puede resolver?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;resolver-el-error&quot;&gt;Resolver el error&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Crear rama para investigar el error&lt;/li&gt;
+  &lt;li&gt;Crear rama para resolver el error&lt;/li&gt;
+  &lt;li&gt;Activar logs y hacer un rastreo operativo&lt;/li&gt;
+  &lt;li&gt;LEER las excepciones&lt;/li&gt;
+  &lt;li&gt;Hacer rastreo por código&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;extra&quot;&gt;Extra&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Utilicen herramientas de debug&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 30 Oct 2017 11:10:00 -0600</pubDate>
+        <link>http://localhost:4000/bug-handling</link>
+        <guid isPermaLink="true">http://localhost:4000/bug-handling</guid>
+        
+        
+        <category>micro trainning</category>
+        
+        <category>error</category>
+        
+        <category>code</category>
+        
+        <category>bug</category>
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Logs for Development</title>
@@ -22,8 +82,80 @@
       &lt;li&gt;Stream&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Buscar siempre&lt;/li&gt;
-  &lt;li&gt;Una vez terminado se debe hacer un merge sobre master&lt;/li&gt;
+  &lt;li&gt;Buscar siempre que el mecanismo de logging sea de forma asíncrona&lt;/li&gt;
+  &lt;li&gt;Para el tema en particular de desarrollo fullstack (dependiendo del stack) considerar en la manera de lo posible que la librería corra sobre el stack completo.&lt;/li&gt;
+  &lt;li&gt;Buscar que la librería pueda integrarse con otros servicios o mecanismos de logging para cuestiones cómo: Persistencia, Búsqueda o Rastreo, Centralización, Agregación.
+    &lt;ul&gt;
+      &lt;li&gt;Loggly&lt;/li&gt;
+      &lt;li&gt;Elasticsearch - Logstash - Kibana&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;niveles-de-logs&quot;&gt;Niveles de logs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;De acuerdo a su nivel de importancia y/o prioridad los logs se pueden categorizar en (dependiendo de la librería o protocolo):
+    &lt;ul&gt;
+      &lt;li&gt;error&lt;/li&gt;
+      &lt;li&gt;warn&lt;/li&gt;
+      &lt;li&gt;info&lt;/li&gt;
+      &lt;li&gt;verbose&lt;/li&gt;
+      &lt;li&gt;debug&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Caso particular para java (Logback):
+    &lt;ul&gt;
+      &lt;li&gt;TRACE &amp;lt; DEBUG &amp;lt; INFO &amp;lt; WARN &amp;lt; ERROR &amp;lt; OFF&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reglas&quot;&gt;Reglas&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Evitar uso de métodos bloqueantes:
+    &lt;ul&gt;
+      &lt;li&gt;console.log&lt;/li&gt;
+      &lt;li&gt;System.out.print*&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Los servicios corriendo en producción deben siempre correr con un nivel de logs muy bajo:
+    &lt;ul&gt;
+      &lt;li&gt;error o warn (O el nivel correspondiente de acuerdo a la librería)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.json(),
+  transports: [
+    //
+    // - Write to all logs with level `info` and below to `combined.log` 
+    // - Write all logs error (and below) to `error.log`.
+    //
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+});
+
+//
+// If we're not in production then log to the `console` with the format:
+// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
+// 
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.simple()
+  }));
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;enlaces-recomendados&quot;&gt;Enlaces recomendados&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.loggly.com/ultimate-guide/node-logging-basics/&quot;&gt;Node Logging Basics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.loggly.com/blog/a-benchmark-of-five-node-js-logging-libraries/&quot;&gt;A benchmark of five Node.js logging libraries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc5424&quot;&gt;The Syslog Protocol&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.javapractices.com/topic/TopicAction.do?Id=143&quot;&gt;Logging messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://logback.qos.ch/manual/architecture.html#basic_selection&quot;&gt;Printing methods and the basic selection rule in logback&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 25 Oct 2017 21:36:01 -0500</pubDate>
