@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Bug Handling"
+date:   2017-10-30 17:10:00
+description: Como tratar errores [Desarrolladores].
+categories:
+- micro trainning
+- error
+- code
+- bug
+-d ev
+permalink: bug-handling
+author: Carlos
+---
+
+## ¿Como lidiar con un BUG?
+
+### No grito, no corro no empujo
+
+### Tratar la causa, no el síntoma
+- No grito, No corro, no empujo
+- Segementar
+- diagnostico
+  - Reproducir
+    - Recopilar los pasos que llevaron al bug
+    - validar contexto (base de datos, variables de entorno)
+    - Lograr consistencia, encontrar patrones
+  - Segmentar
+  Usar logs
+  
+  Si es posible automatizar la validación del escenario
+  Utilizar herramientas de monitoreo
+  - Chorme
+  - IDE
+
+  Hacer Trace
+  Hacer una rama de investigación y no tener pudor 
+  Entender el sistema
