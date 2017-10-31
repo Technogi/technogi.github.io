@@ -32,6 +32,7 @@ author: Carlos
 - ¿Es verdaderamente un errors?
 - ¿Yo lo puedo arreglar?
 - ¿Quien lo puede resolver?
+- ¿Fué provocado por el último cambio? 
 
 ### Resolver el error
 
