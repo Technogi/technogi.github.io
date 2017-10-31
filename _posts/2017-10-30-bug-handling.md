@@ -41,5 +41,11 @@ author: Carlos
 - LEER las excepciones
 - Hacer rastreo por código
 
+### Una vez resuelto el bug
+
+- Crear la/las preubas que automaticen el escenario que genera el bug
+- Validar el resolución del bug en producción
+
 ### Extra
+
 - Utilicen herramientas de debug
