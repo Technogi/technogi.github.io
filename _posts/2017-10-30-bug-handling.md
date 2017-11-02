@@ -12,7 +12,7 @@ categories:
 permalink: bug-handling
 author: Carlos
 ---
-## No grito, no corro no empujo
+## No grito, no corro, no empujo
 
 - ¿Que pasa? ¿Que debería pasar?
 - Pedir detalles para poder reproducir
@@ -41,7 +41,7 @@ author: Carlos
 
 ## Una vez resuelto el bug
 
-- Crear la/las preubas que automaticen el escenario que genera el bug
+- Crear la/las pruebas que automaticen el escenario que genera el bug
 - Validar el resolución del bug en producción
 
 ## Extra
