@@ -44,6 +44,9 @@ author: Juan Francisco
     - Component
     - End to End (E2E)
     - Exploratory
+
+    ![Alt text](../images/pyramid-testing.png?raw=true "Pyramid Testing")
+
 - Emplear las herramientas idóneas para cada tipo de prueba.
 - Probar múltiples escenarios:
   - No conformarse con el happy path
