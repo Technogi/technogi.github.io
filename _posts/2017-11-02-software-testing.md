@@ -16,7 +16,7 @@ author: Juan Francisco
 - Desarrolladores introducen bugs/errors en la programación.
 - Ineficiente análisis, diseño, interpetración y construcción.
 - El usuario final no tiene un completo conocimiento del uso del Software (Plataforma/App/WebApp).
-- Se efectua un uso incorrecto uso del Software (Maliciosamente).
+- Se efectua un uso incorrecto del Software (Maliciosamente).
 - Se estresa el Software en condiciones para las cuales no fue diseñado.
 - Diferentes setups y ambientes
 
