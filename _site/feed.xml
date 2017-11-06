@@ -5,22 +5,212 @@
     <description>Technogi Tech Blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 Oct 2017 17:59:15 -0600</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2017 17:59:15 -0600</lastBuildDate>
+    <pubDate>Mon, 06 Nov 2017 10:11:52 -0600</pubDate>
+    <lastBuildDate>Mon, 06 Nov 2017 10:11:52 -0600</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>Bug Handling</title>
-        <description>&lt;h2 id=&quot;como-lidiar-con-un-bug&quot;&gt;¿Como lidiar con un BUG?&lt;/h2&gt;
+        <title>Software Testing</title>
+        <description>&lt;h2 id=&quot;humanos-imperfectos-desarrollandoutilizando-software-perfecto&quot;&gt;Humanos (imperfectos) desarrollando/utilizando software (perfecto)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Al ser humanos por naturaleza cometemos errores.&lt;/li&gt;
+  &lt;li&gt;El Software a construir es cada vez más especializado y complejo, así como los requerimientos para su desarrollo y construcción.&lt;/li&gt;
+  &lt;li&gt;Desarrolladores introducen bugs/errors en la programación.&lt;/li&gt;
+  &lt;li&gt;Ineficiente análisis, diseño, interpetración y construcción.&lt;/li&gt;
+  &lt;li&gt;El usuario final no tiene un completo conocimiento del uso del Software (Plataforma/App/WebApp).&lt;/li&gt;
+  &lt;li&gt;Se efectua un uso incorrecto del Software (Maliciosamente).&lt;/li&gt;
+  &lt;li&gt;Se estresa el Software en condiciones para las cuales no fue diseñado.&lt;/li&gt;
+  &lt;li&gt;Diferentes setups y ambientes&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;no-grito-no-corro-no-empujo&quot;&gt;No grito, no corro no empujo&lt;/h3&gt;
+&lt;h2 id=&quot;impacto-de-bugserrors-en-software&quot;&gt;Impacto de Bugs/Errors en Software&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Los errores tienen un impacto en el Software, así cómo en las Personas que lo utilizan:
+    &lt;ul&gt;
+      &lt;li&gt;Poco importante
+        &lt;ul&gt;
+          &lt;li&gt;Texto mal redactado.&lt;/li&gt;
+          &lt;li&gt;Redondeos en Montos (Compra, Venta de Productos).&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Costoso en el rubro económico
+        &lt;ul&gt;
+          &lt;li&gt;La organización invierte en el Software para generar ganancias y/o reducir costos.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Peligroso
+        &lt;ul&gt;
+          &lt;li&gt;Atenta contra la vida, bienestar e integridad de las personas.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cómo-reduzco-y-mitigo-los-riesgos&quot;&gt;Cómo reduzco y mitigo los riesgos&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pruebas, pruebas y más pruebas
+    &lt;ul&gt;
+      &lt;li&gt;Existen muchos tipos de pruebas, incluso gente especializada en éste rubro.
+        &lt;ul&gt;
+          &lt;li&gt;Unit testing&lt;/li&gt;
+          &lt;li&gt;Integration testing&lt;/li&gt;
+          &lt;li&gt;System testing&lt;/li&gt;
+          &lt;li&gt;User acceptance testing&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Automatizar la mayor cantidad de pruebas (sin caer en lo excesivo, por cuestiones de mantenimiento).
+    &lt;ul&gt;
+      &lt;li&gt;Pyramid Testing Model
+        &lt;ul&gt;
+          &lt;li&gt;Unit&lt;/li&gt;
+          &lt;li&gt;Integration&lt;/li&gt;
+          &lt;li&gt;Component&lt;/li&gt;
+          &lt;li&gt;End to End (E2E)&lt;/li&gt;
+          &lt;li&gt;Exploratory&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;img src=&quot;../images/pyramid-testing.png?raw=true&quot; alt=&quot;Alt text&quot; title=&quot;Pyramid Testing&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Emplear las herramientas idóneas para cada tipo de prueba.&lt;/li&gt;
+  &lt;li&gt;Probar múltiples escenarios:
+    &lt;ul&gt;
+      &lt;li&gt;No conformarse con el happy path&lt;/li&gt;
+      &lt;li&gt;Probar siempre escenarios de excepción (contemplando escenarios reales y poniendonos el sombrero de tester así cómo de usuario)&lt;/li&gt;
+      &lt;li&gt;Probar con distintos valores
+        &lt;ul&gt;
+          &lt;li&gt;Frontera: mínimos, medios, máximos&lt;/li&gt;
+          &lt;li&gt;Erróneos&lt;/li&gt;
+          &lt;li&gt;Faltantes&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;en-mi-desarrollo-qué-pruebo&quot;&gt;En mi desarrollo ¿Qué pruebo?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acceso a datos (DAO)
+    &lt;ul&gt;
+      &lt;li&gt;Un querie muy complejo&lt;/li&gt;
+      &lt;li&gt;Un querie muy abstracto&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Métodos de negocio (Services/Domain)
+    &lt;ul&gt;
+      &lt;li&gt;Métodos con varias Reglas de Negocio.&lt;/li&gt;
+      &lt;li&gt;Métodos con Reglas de Negocio o funcionalidad importantes.&lt;/li&gt;
+      &lt;li&gt;Métodos con gran cantidad de Excepciones.&lt;/li&gt;
+      &lt;li&gt;Métodos con múltiples caminos.&lt;/li&gt;
+      &lt;li&gt;Métodos con datos sensibles, de alto impacto, o trascendencia.&lt;/li&gt;
+      &lt;li&gt;Probar happy path y múltiples escenarios&lt;/li&gt;
+      &lt;li&gt;Métodos con dependencias a otros servicios (microservicios, apis, sistemas o servicios externos)
+        &lt;ul&gt;
+          &lt;li&gt;No probar la funcionalidad de la dependencia, más bien simular la dependencia:
+            &lt;ul&gt;
+              &lt;li&gt;Mocks&lt;/li&gt;
+              &lt;li&gt;Stubs&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Métodos relacionados a la seguridad del sistema&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rest Endpoints (APIs)
+    &lt;ul&gt;
+      &lt;li&gt;Endpoints con gran cantidad de Excepciones.&lt;/li&gt;
+      &lt;li&gt;Endpoints con múltiples caminos.&lt;/li&gt;
+      &lt;li&gt;Endpoints con datos sensibles, de alto impacto, o trascendencia.&lt;/li&gt;
+      &lt;li&gt;Endpoints con dependencias a otros servicios (microservicios, apis, sistemas o servicios externos)&lt;/li&gt;
+      &lt;li&gt;Endpoints relacionados a la seguridad del sistema&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Interfaz de Usuario
+    &lt;ul&gt;
+      &lt;li&gt;Widgets o Elementos con comportamiento especial&lt;/li&gt;
+      &lt;li&gt;Aspectos de seguridad&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Apoyarme siempre de un buen framework para testing&lt;/li&gt;
+  &lt;li&gt;Mecanismos de abstracción
+    &lt;ul&gt;
+      &lt;li&gt;Dummy&lt;/li&gt;
+      &lt;li&gt;Fake&lt;/li&gt;
+      &lt;li&gt;Stubs&lt;/li&gt;
+      &lt;li&gt;Spies&lt;/li&gt;
+      &lt;li&gt;Mocks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Las dependencias a Middleware, Componentes se pueden embeber en la misma prueba, o bien levantar un ambiente idóneo para probar los escenarios necesarios.
+    &lt;ul&gt;
+      &lt;li&gt;Data Bases&lt;/li&gt;
+      &lt;li&gt;Work Queues&lt;/li&gt;
+      &lt;li&gt;Stream Channels&lt;/li&gt;
+      &lt;li&gt;Schedulers&lt;/li&gt;
+      &lt;li&gt;Others&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extras&quot;&gt;Extras&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Realizar pruebas no garantiza un Software Perfecto ni libre de bugs/errores, más bien provee la identificación y mitigación de estos.&lt;/li&gt;
+  &lt;li&gt;Genera un sentido de bienestar con uno mismo y con en el usuario final.&lt;/li&gt;
+  &lt;li&gt;La automatización de pruebas se traduce en:
+    &lt;ul&gt;
+      &lt;li&gt;Incremento en el costo del desarrollo del Software
+        &lt;ul&gt;
+          &lt;li&gt;Al inicio se invierte mucho tiempo en la automatización de las pruebas.&lt;/li&gt;
+          &lt;li&gt;En ocasiones existe más código para probar el Software que el código del propio Software&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Reduce el tiempo de las pruebas&lt;/li&gt;
+      &lt;li&gt;Garantiza la adición, o en su defecto la detección de bugs/errors en la refactorización de código o adición de nueva funcionalidad.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;enlaces-recomendados&quot;&gt;Enlaces recomendados&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.process.st/types-of-software-testing/&quot;&gt;4 Types of Software Testing and When You Should Use Them&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/why-software-testing-is-important&quot;&gt;Why is software testing so important? How to share the value with your team&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.soapui.org/testing-dojo/world-of-api-testing/why-test.html&quot;&gt;Why Test Software and APIs?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/bliki/TestPyramid.html&quot;&gt;TestPyramid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&quot;&gt;The Forgotten Layer of the Test Automation Pyramid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/microservice-testing/&quot;&gt;Testing Strategies in a Microservice Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hamvocke.com/blog/testing-microservices/&quot;&gt;Testing Microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.agilenutshell.com/episodes/41-testing-pyramid&quot;&gt;The Testing Pyramid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/mocksArentStubs.html&quot;&gt;Mocks Aren’t Stubs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 01 Nov 2017 17:03:05 -0600</pubDate>
+        <link>http://localhost:4000/software-testing</link>
+        <guid isPermaLink="true">http://localhost:4000/software-testing</guid>
+        
+        
+        <category>micro trainning</category>
+        
+        <category>software</category>
+        
+        <category>testing</category>
+        
+      </item>
+    
+      <item>
+        <title>¿Como lidiar con un BUG?</title>
+        <description>&lt;h2 id=&quot;no-grito-no-corro-no-empujo&quot;&gt;No grito, no corro, no empujo&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;¿Que pasa? ¿Que debería pasar?&lt;/li&gt;
   &lt;li&gt;Pedir detalles para poder reproducir&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;encontrar-el-problema&quot;&gt;Encontrar el problema&lt;/h3&gt;
+&lt;h2 id=&quot;encontrar-el-problema&quot;&gt;Encontrar el problema&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Lograr reproducir el error&lt;/li&gt;
@@ -29,15 +219,16 @@
   &lt;li&gt;Acotar el error&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;deslinde-de-responabilidades&quot;&gt;Deslinde de responabilidades&lt;/h3&gt;
+&lt;h2 id=&quot;deslinde-de-responabilidades&quot;&gt;Deslinde de responabilidades&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;¿Es verdaderamente un errors?&lt;/li&gt;
   &lt;li&gt;¿Yo lo puedo arreglar?&lt;/li&gt;
   &lt;li&gt;¿Quien lo puede resolver?&lt;/li&gt;
+  &lt;li&gt;¿Fué provocado por el último cambio?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;resolver-el-error&quot;&gt;Resolver el error&lt;/h3&gt;
+&lt;h2 id=&quot;resolver-el-error&quot;&gt;Resolver el error&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Crear rama para investigar el error&lt;/li&gt;
@@ -47,7 +238,15 @@
   &lt;li&gt;Hacer rastreo por código&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;extra&quot;&gt;Extra&lt;/h3&gt;
+&lt;h2 id=&quot;una-vez-resuelto-el-bug&quot;&gt;Una vez resuelto el bug&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Crear la/las pruebas que automaticen el escenario que genera el bug&lt;/li&gt;
+  &lt;li&gt;Validar el resolución del bug en producción&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extra&quot;&gt;Extra&lt;/h2&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Utilicen herramientas de debug&lt;/li&gt;
 &lt;/ul&gt;
