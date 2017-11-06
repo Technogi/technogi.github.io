@@ -51,6 +51,21 @@ body {
     }
 }
 
+.header-links{
+  background-color: $base-00 !important;
+}
+
+.header-img{
+  background-color: $base-0A !important;
+}
+
+
+
+.post-title{
+  color:$base-0A !important;
+  border: '1px solid #000';
+}
+
 .wc-img-replace { /* replace text with a background-image */
   display: inline-block;
   overflow: hidden;
@@ -124,6 +139,7 @@ p {
 
 a {
   background: transparent;
+  color: $base-0A !important;
 }
 
 a:active, a:hover, a:focus {
@@ -181,6 +197,10 @@ body {
 
 a {
   @extend .default-anchor;
+  color: $base-0A !important;
+  &:hover, &:active, &:focus {
+    border-bottom-color: $base-0A;
+  }
 }
 
 header.main-header, footer.main-footer {
@@ -298,9 +318,10 @@ footer.main-footer {
     border-radius: 0.25em;
     @include transition(background-color 0.2s);
     border-bottom-color: transparent;
+    color: $base-0A !important;
 
     &:hover {
-      background-color: $base-08;
+      background-color: $base-0A;
     }
   }
     
@@ -473,6 +494,7 @@ body.theme-base-01 {
   
   a {
     @extend .default-anchor;   
+    color: $base-0A !important;
   }
 
   footer.main-footer {
@@ -482,8 +504,12 @@ body.theme-base-01 {
 
   header.main-header {
     color: $base-01;
+    background-color: $base-00;
     ul li { 
       color: $base-08;
+    }
+    a,span{
+      color: $base-0A;
     }
   }
 
@@ -633,6 +659,7 @@ div.post {
     border-bottom: none;
   }
 }
+
 p.post-meta {
   line-height: 1.6;
   letter-spacing: 2px;
