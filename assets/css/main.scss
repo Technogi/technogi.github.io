@@ -49,6 +49,9 @@ body {
         display: table;
         clear: both;
     }
+    table {
+      border-color:$base-0A !important;
+    }
 }
 
 .header-links{
@@ -144,6 +147,7 @@ a {
 
 a:active, a:hover, a:focus {
   outline: 0;
+  border-bottom-color: $base-0A;
 }
 
 img {
@@ -153,12 +157,11 @@ img {
   height: auto;
 }
 
-
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $base-0A;
   height: 0;
 }
 
@@ -220,7 +223,7 @@ header.main-header {
   a { 
     color: inherit;
     &:hover, &:active, &:focus {
-      border-bottom-color: transparent;
+      border-bottom-color: $base-0A;
     }
   }
 
@@ -228,11 +231,13 @@ header.main-header {
     width: 100%;
     text-align: center;
     padding: 15px;
+    list-style: circle !important;
   }
   ul li {       
     display: inline-block;
     position:relative;
-    color: $base-08;
+    color: inherit;
+    
   }
 
   ul li span {
@@ -251,7 +256,7 @@ header.main-header {
       @include font-size(18px);
     }
     &:hover, &:focus, &:active {
-      border-bottom-color: inherit;
+      border-bottom-color: $base-0A;
     }
   }
 }
@@ -317,7 +322,7 @@ footer.main-footer {
     background-size: 224px 64px;
     border-radius: 0.25em;
     @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
+    border-bottom-color: $base-0A;
     color: $base-0A !important;
 
     &:hover {
@@ -396,15 +401,19 @@ div.page-content {
 div.page-content {
   ul {       
     padding: 0 0 1em 0;
+    margin-left: 5%;
+    text-align: left; 
     li {
+      text-align: left; 
       @include font-size(14px);
       color: $color-2; 
       line-height: 1.6;
-      background: url(./images/bullet.svg);
+      list-style-type: circle;
+      //background: url(./images/bullet.svg);
       background-repeat: no-repeat;
       background-position: 0 6px;
       padding: 0 0 5px 15px;
-      margin-left: 0;
+      //margin-left: 0;
     }
     @include MQ(M){        
       li {         
@@ -495,6 +504,9 @@ body.theme-base-01 {
   a {
     @extend .default-anchor;   
     color: $base-0A !important;
+    &:hover{
+      border-bottom-color: $base-0A;
+    }
   }
 
   footer.main-footer {
@@ -641,15 +653,14 @@ Post styles
 --------------------------------- */
 
 div.posts {
-
-  .div.post {
+  .div.post{
     
   }
 }
 div.post {
   padding-top: .5em;
   padding-bottom: 1em;
-  border-bottom: 1px $base-05 solid;
+  border-bottom: 1px $base-0A solid;
   @include MQ(M) {
 
     padding-bottom: 2em;  
@@ -714,8 +725,8 @@ p.post-meta {
 --------------------------------- */
 .post-footer {
   
-  border-top: 1px solid $base-05;
-  border-bottom: 1px solid $base-05;
+  border-top: 1px solid $base-0A;
+  border-bottom: 1px solid $base-0A;
   height: 40px;
   display: table;
   width: 100%;
@@ -771,7 +782,7 @@ table {
 td,
 th {
   padding: .25em .5em;
-  border: 1px solid $base-04;
+  border: 1px solid $base-0A;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
