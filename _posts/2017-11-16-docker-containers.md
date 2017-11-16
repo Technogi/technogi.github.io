@@ -32,7 +32,7 @@ author: Juan Francisco
   ![Docker Lifecycle-Cont](../images/docker-pull-deploy.png?raw=true "Docker Lifecycle Cont")
 
 ## Ejemplo
-- package.json
+package.json
 ````
 {
   "name": "hello-docker",
@@ -54,7 +54,7 @@ author: Juan Francisco
 }  
 ````
 
-- Dockerfile
+Dockerfile
 ````
 FROM node:boron
 MAINTAINER Juan Francisco Alvarez Urquijo <paco@technogi.com.mx>
@@ -87,7 +87,7 @@ docker run -p 49160:8080 --name node-web-app -it -d fkone/node-web-app
 curl -i localhost:49160
 ````
 
-- Envío de Imagen a Repositorio de Imágenes
+Envío de Imagen a Repositorio de Imágenes
 ````
 docker login
 
