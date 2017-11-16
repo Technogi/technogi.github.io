@@ -33,7 +33,7 @@ author: Juan Francisco
 
 ## Ejemplo
 - package.json
-```
+````
 {
   "name": "hello-docker",
   "version": "1.0.0",
@@ -52,10 +52,10 @@ author: Juan Francisco
     "express": "^4.13.3"
   }
 }  
-```
+````
 
 - Dockerfile
-```
+````
 FROM node:boron
 MAINTAINER Juan Francisco Alvarez Urquijo <paco@technogi.com.mx>
 
@@ -76,23 +76,23 @@ COPY . .
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
-```
+````
 
 - Construcción de imagen y ejecución de contenedor
-```
+````
 docker build -t fkone/node-web-app .
 
 docker run -p 49160:8080 --name node-web-app -it -d fkone/node-web-app
 
 curl -i localhost:49160
-```
+````
 
 - Envío de Imagen a Repositorio de Imágenes
-```
+````
 docker login
 
 docker push fkone/node-web-app
-```
+````
 
 ## Enlaces recomendados
 - [Docker](https://www.docker.com/)
