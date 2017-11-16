@@ -7,7 +7,7 @@ categories:
 - micro trainning
 - docker
 - containers
-permalink: software-testing
+permalink: docker-containers
 author: Juan Francisco
 ---
 ## Contenedores
