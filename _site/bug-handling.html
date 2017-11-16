@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bug Handling</title>
+    <title>¿Como lidiar con un BUG?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Harmony is a free responsive jekyll theme by Gayan Virajith and Maheshika Lakmali. Sourced on Github -  https://github.com/gayanvirajith/harmony
 ">
@@ -27,17 +27,16 @@
 
 <body class="theme-base-01">
     <header class="main-header">
-
         <div class="wc-container">
             <table>
                 <tr>
-                    <td>
+                    <td class="header-img">
                         <img src="/images/logonegro.png" style="height: 1em" />
                     </td>
-                    <td>
+                    <td class="header-links">
                         <ul>
 	<li>
-		<a href="http://localhost:4000/about">About</a><span>/</span>
+		<a href="http://www.technogi.com.mx/">About Us</a><span>/</span>
 	</li>
 	<li>
 		<a href="http://localhost:4000/blog">Blog</a><span>/</span>
@@ -45,7 +44,7 @@
 	
 	<li>
 		<a title="technogi on Github" 
-			href="https://github.com/gayanvirajith/harmony" target="_blank">
+			href="https://github.com/Technogi/technogi.github.io/tree/master" target="_blank">
 			Download
 		</a><span>/</span>
 	</li>
@@ -54,9 +53,7 @@
                     </td>
                 </tr>
             </table>
-
             <h1>
-
                 <a href="/">Technogi Tech Blog</a>
             </h1>
 
@@ -65,7 +62,7 @@
     <div class="page-content wc-container">
 	
 	<div class="post">
-		<h1>Bug Handling</h1>
+		<h1>¿Como lidiar con un BUG?</h1>
 		<p class="post-meta">
 			
       <span class="categories">
@@ -77,16 +74,14 @@
 	    </span>
 		</p>		
 		<div class="post">
-			<h2 id="como-lidiar-con-un-bug">¿Como lidiar con un BUG?</h2>
-
-<h3 id="no-grito-no-corro-no-empujo">No grito, no corro no empujo</h3>
+			<h2 id="no-grito-no-corro-no-empujo">No grito, no corro, no empujo</h2>
 
 <ul>
   <li>¿Que pasa? ¿Que debería pasar?</li>
   <li>Pedir detalles para poder reproducir</li>
 </ul>
 
-<h3 id="encontrar-el-problema">Encontrar el problema</h3>
+<h2 id="encontrar-el-problema">Encontrar el problema</h2>
 
 <ul>
   <li>Lograr reproducir el error</li>
@@ -95,15 +90,16 @@
   <li>Acotar el error</li>
 </ul>
 
-<h3 id="deslinde-de-responabilidades">Deslinde de responabilidades</h3>
+<h2 id="deslinde-de-responabilidades">Deslinde de responabilidades</h2>
 
 <ul>
   <li>¿Es verdaderamente un errors?</li>
   <li>¿Yo lo puedo arreglar?</li>
   <li>¿Quien lo puede resolver?</li>
+  <li>¿Fué provocado por el último cambio?</li>
 </ul>
 
-<h3 id="resolver-el-error">Resolver el error</h3>
+<h2 id="resolver-el-error">Resolver el error</h2>
 
 <ul>
   <li>Crear rama para investigar el error</li>
@@ -113,7 +109,15 @@
   <li>Hacer rastreo por código</li>
 </ul>
 
-<h3 id="extra">Extra</h3>
+<h2 id="una-vez-resuelto-el-bug">Una vez resuelto el bug</h2>
+
+<ul>
+  <li>Crear la/las pruebas que automaticen el escenario que genera el bug</li>
+  <li>Validar el resolución del bug en producción</li>
+</ul>
+
+<h2 id="extra">Extra</h2>
+
 <ul>
   <li>Utilicen herramientas de debug</li>
 </ul>
@@ -128,6 +132,11 @@
 		<ul class="posts">
 		    
 		    <li>
+			  <span>01 Nov 2017 &raquo;</span>
+			  <a href="http://localhost:4000/software-testing">Software Testing</a>
+		    </li>
+		    
+		    <li>
 			  <span>25 Oct 2017 &raquo;</span>
 			  <a href="http://localhost:4000/logs-for-development">Logs for Development</a>
 		    </li>
@@ -135,11 +144,6 @@
 		    <li>
 			  <span>20 Oct 2017 &raquo;</span>
 			  <a href="http://localhost:4000/git-workflow">Git Workflow</a>
-		    </li>
-		    
-		    <li>
-			  <span>18 Oct 2017 &raquo;</span>
-			  <a href="http://localhost:4000/error-handling">Error Handling</a>
 		    </li>
 		    
 		</ul>
@@ -155,7 +159,7 @@
 		<div class="column-2"><a href="http://localhost:4000/ ">Home</a></div>
 		<div class="column-3">
 			
-				<span>Newer >></span>
+				<a href="http://localhost:4000/software-testing">Newer >></a>
 			
 		</div>
 	</div>
@@ -167,9 +171,9 @@
             <div class="column one">
                 <h6>Few more links</h6>
 <ul class="menu">
-    <li><a href="http://localhost:4000/about">About</a></li>
+    <li><a  href="http://www.technogi.com.mx/">About</a></li>
     <li><a href="http://localhost:4000/blog">Blog</a></li>
-    <li><a href="http://localhost:4000/faq">Help / FAQ</a></li>    
+    <!--<li><a href="http://localhost:4000/faq">Help / FAQ</a></li> -->
 </ul>		
             </div>
             <div class="column two">
@@ -219,7 +223,7 @@
         </div>
         <p class="wc-container disclaimer">
             
-	Made by <a href="http://gayan.me" target="_blank">Gayan Virajith</a> For everyone.      
+	Made by <a href="https://github.com/Technogi" target="_blank">Technogi</a>.      
 
 Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
         </p>
