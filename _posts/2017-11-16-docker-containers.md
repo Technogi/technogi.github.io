@@ -78,7 +78,7 @@ EXPOSE 8080
 CMD [ "npm", "start" ]
 ````
 
-- Construcción de imagen y ejecución de contenedor
+Construcción de imagen y ejecución de contenedor
 ````
 docker build -t fkone/node-web-app .
 
