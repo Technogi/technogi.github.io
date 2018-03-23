@@ -84,7 +84,7 @@ docker build -t fkone/node-web-app .
 
 docker run -p 49160:8080 --name node-web-app -it -d fkone/node-web-app
 
-curl -i localhost:49160
+curl -i -v localhost:49160
 ````
 
 Envío de Imagen a Repositorio de Imágenes
